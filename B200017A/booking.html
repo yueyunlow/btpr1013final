@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="images/logo-trans.png" type="image/icon type">
+    <link rel="stylesheet" href="assets/css/finalExam.css">
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/formValidate.js"></script>
+    <meta name="author" content="Yue Yun Low">
+    <meta name="description" content="Make your appointment with us and we shall make your time memorable."/>
+    <title>Appointment | Kisho Japanese</title>
+</head>
+<body>
+    <div class="topnav" id="myTopnav">
+        <div class="topnav-group">
+            <a href="index.html" style="padding-top: 10px;padding-bottom: 0px;" class="topnav-logo"><img src="images/logo-trans.png" alt="restaurant's logo"
+                style="max-width: 40px; max-height: 30px;"/>
+            </a>
+            <a href="index.html">HOME</a>
+            <a href="about.html">HISTORY OF KAISEKI</a>
+            <a href="ingredient.html">INGREDIENT OF KAISEKI</a>
+            <a href="booking.html">APPOINTMENT</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+
+    <button onclick="topFunction()" id="topBtn" title="Go to top">Top</button>
+
+    <div class="contact-wrap">
+        <div class="contact-form">
+            <form name="myForm" action="booking.html" enctype="multipart/form-data" onsubmit="return validateBookForm()" method="post">
+            <h1 style="font-weight:bold;font-size:20px;font-family:Arial, Helvetica, sans-serif;text-align:left; padding-left:10%;padding-bottom: 2em;">Appointment Form</h1>
+            <div class="booking-text">
+                <label for="full name">Full Name<span style="color:red;"> *</span></label><br>
+                <input type="text" style="height:40px; width: 40%;" name="fname" id="fname" placeholder="First Name" required><span>&nbsp;</span><input type="text" style="height:40px; width: 40%;" name="lname" id="lname" placeholder="Last Name" required>
+                <br>
+                <br>
+                <label for="email">Email<span style="color:red;"> *</span></label><br>
+                <input type="email" style="height:40px; width: 60%;" name="email" id="email"  placeholder="Email" required>
+                <br>
+                <br>
+                <label for="contactNumber">Phone Number<span style="color:red;"> *</span></label><br>
+                <input type="text" style="height:40px; width: 60%;" id="contactNumber" maxlength="12" onkeyup="value=value.replace(/[^\d]/g,'')" onblur="value=value.replace(/[^\d]/g,'')" name="contactNumber"  placeholder="Phone Number" required>
+                <br>
+                <br>
+                <label for="meal">Meal<span style="color:red;"> *</span></label><br>
+                <label for="lunch">Lunch</label>
+                <input type="radio" name="lunch" id="lunch"value="lunch" checked="true">
+                <label for= "dinner">Dinner</label>
+                <input type="radio" name="dinner" id="dinner" value="dinner">
+                <br>
+                <br>
+                <label for="reserveDate">Reservation Date<span style="color:red;"> *</span></label><br>
+                <input type="date" style="height:40px; width: 40%;" id="reserveDate" name="reserveDate" required>
+                <br>
+                <br>
+                <label for="reserveTime">Reservation Time(Example:12:00PM,12:30PM)<span style="color:red;"> *</span></label><br>
+                <input type="time" style="height:40px; width: 40%;" id="reserveTime" name="reserveTime" step="1800" min="10:00:00" max="21:00:00" required>
+                <br>
+                <br>
+                <label for="personNumber">How many person is this booking for?<span style="color:red;"> *</span></label><br>
+                <input type="number" style="height:40px; width: 40%;" id="personNumber" name="personNumber"  placeholder="ex: 3" min="1" max="20" required>
+                <br>
+                <br>
+                <label for="allergy">Any allergy?</label><br>
+                <textarea placeholder="Please state the allergy here." name="notes" id="notes" rows="3" cols="30"></textarea>
+                <br>
+                <br>
+                <label for="notes">Any special request?</label><br>
+                <textarea placeholder="Ex: We want to get welcomed with a glass of champaign." name="notes" id="notes" rows="6" cols="30"></textarea>
+                <br>
+                <br>
+            </div>
+            
+            <div style="text-align: left;padding-left: 10%;">
+                <input type="checkbox"  name="privacy policy" id="privacyPolicy">
+                <a>By making the reservation, you agree to accept our<a>
+                <a target="_blank" href="files/privacypolicy.pdf">Privacy Policy</a>
+            </div>
+            
+            <br>
+            <div style="text-align: left;padding-left: 10%;">
+                <button class="booking-btn position" id="submit">Make Reservation</button>
+                <br>
+                <br>
+                <br>
+            </div>
+            <script src="assets/js/formValidate.js"></script>
+        </form>
+        </div>
+    </div>
+    
+
+    <footer class="hero-footer">
+        <img src="images/logo-trans.png" alt="Restaurant Logo" style="max-width: 60px; max-height: 50px;padding-bottom: 1%;"/>
+        <a target="_blank" href="https://www.facebook.com/KishoJohor/"><img src="images/facebook.png" style="height: auto;width: 30px;"></a>
+        <p>― 料亭吉祥  Kisho Japanese Restaurant 日本料理店吉祥―<br>
+            住所 Address 地址：59, Jalan Perang, Taman Pelangi, 80400 Johor Bahru.<br>
+            電話 Tel 电话：+60 7-335-2312</p>
+        <p>Restaurant Page Redesign - Created By Low Yue Yun @ 2021</p>
+    </footer>
+    
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
